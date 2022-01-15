@@ -16,12 +16,12 @@ const changeMode = () => {
 	if (body.dataset.mode === 'light') {
 		body.dataset.mode = 'dark'
 		switchInside.classList.add('switch-active')
-		header.style.backgroundImage = "url('../../dist/img/night.jpg')"
+		header.style.backgroundImage = "url('./dist/img/night.jpg')"
 		localStorage.setItem('mode', 'dark')
 	} else {
 		body.dataset.mode = 'light'
 		switchInside.classList.remove('switch-active')
-		header.style.backgroundImage = "url('../../dist/img/day.jpg')"
+		header.style.backgroundImage = "url('./dist/img/day.jpg')"
 		localStorage.setItem('mode', 'light')
 	}
 }
