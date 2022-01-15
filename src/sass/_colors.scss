@@ -1,0 +1,21 @@
+[data-mode='light'] {
+	--gradient-first: #64b5f6;
+	--gradient-second: #e3f2fd;
+	--bg-color: #ebebeb;
+
+	--main-color: #ffffff;
+	--second-color: #f1c121;
+	--input-color: #242424;
+	--btn-hover: #c0a13a62;
+}
+
+[data-mode='dark'] {
+	--gradient-first: #241327;
+	--gradient-second: #110f11;
+	--bg-color: #444444;
+
+	--main-color: #ebebeb;
+	--second-color: #612d53;
+	--input-color: #f7f7f7;
+	--btn-hover: #3d203550;
+}

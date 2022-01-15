@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5bcf0b1944.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./dist/css/main.min.css">
+</head>
+
+<body data-mode='light'>
+
+    <div class="container">
+
+        <div class="container__header">
+            <div class="switch">
+                <div class="switch-inside"></div>
+            </div>
+            <h1 class="container__city">Mediolan</h1>
+            <div class="container__status">
+                <img class="container__status-img" src="./dist/img/sun.png" alt="weather status">
+                <div class="container__status-line"></div>
+                <p class="container__status-deg"><span class="degrees">25</span>°C</p>
+            </div>
+            <div class="container__search">
+                <input type="text" placeholder="Wpisz miasto..." class="container__search-input">
+                <button class="container__search-btn"><span>szukaj</span></button>
+            </div>
+        </div>
+
+        <div class="container__main">
+
+        </div>
+
+    </div>
+
+
+
+    <script src="./dist/js/color_mode.min.js"></script>
+    <script src="./dist/js/weather_api.min.js"></script>
+</body>
+
+</html>
