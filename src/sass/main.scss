@@ -6,9 +6,9 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-size: 1.8rem;
+	height: 100vh;
 	background-image: linear-gradient(180deg, var(--gradient-first) 0%, var(--gradient-second) 30%);
 }
 
@@ -42,9 +42,18 @@ body {
 
 .container {
 	width: clamp(300px, 100%, 600px);
-	margin: 0 1.5em;
+	margin: 1em 1.5em;
 	background-color: var(--bg-color);
 	box-shadow: 2px 2px 9px rgba(0, 0, 0, 0.55);
+
+	&__error {
+		color: rgb(255, 24, 24);
+		text-align: center;
+		font-size: 1.6rem;
+		font-weight: 700;
+		z-index: 1;
+		height: 20px;
+	}
 
 	&__header {
 		position: relative;
@@ -62,7 +71,7 @@ body {
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			background-color: rgba(0, 0, 0, 0.5);
+			background-color: rgba(0, 0, 0, 0.6);
 			z-index: 0;
 		}
 	}
@@ -72,6 +81,7 @@ body {
 		color: var(--main-color);
 		z-index: 1;
 		margin-bottom: 1em;
+		text-align: center;
 	}
 
 	&__status {
@@ -79,7 +89,7 @@ body {
 		grid-template-columns: 1fr 3px 1fr;
 		width: 100%;
 		z-index: 1;
-		margin-bottom: 4em;
+		margin-bottom: 3em;
 
 		&-img {
 			width: 110px;
@@ -120,6 +130,7 @@ body {
 			border-radius: 14px;
 			z-index: 1;
 			transition: border 0.2s;
+			margin-top: 1em;
 
 			&:focus,
 			&:hover {
@@ -174,6 +185,73 @@ body {
 			&:hover::before {
 				transform: translateX(0) rotate(13deg);
 			}
+		}
+	}
+
+	&__main {
+		position: relative;
+		display: none;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.6em;
+		padding: 3em 1em;
+
+		&::before {
+			position: absolute;
+			top: 7%;
+			left: calc(50% - 2px);
+			content: '';
+			height: 86%;
+			width: 4px;
+			background-color: var(--second-color);
+			border: 3px solid rgba(255, 255, 255, 0.25);
+		}
+	}
+
+	&__info {
+		position: relative;
+		text-align: center;
+		padding: 0.4em;
+		color: var(--input-color);
+
+		&-head {
+			margin-bottom: 0.3em;
+			font-size: 1.7rem;
+		}
+
+		&-body {
+			font-size: 1.7rem;
+		}
+	}
+
+	&__info:nth-child(odd) {
+		grid-column: 1/2;
+		top: -20px;
+
+		&::before {
+			position: absolute;
+			top: 45%;
+			right: 2px;
+			content: '';
+			height: 2px;
+			width: 30px;
+			background-color: var(--second-color);
+			border: 0.3px solid rgba(255, 255, 255, 0.25);
+		}
+	}
+
+	&__info:nth-child(even) {
+		grid-column: 2/3;
+		bottom: -20px;
+
+		&::before {
+			position: absolute;
+			top: 45%;
+			left: 2px;
+			content: '';
+			height: 2px;
+			width: 30px;
+			background-color: var(--second-color);
+			border: 0.2px solid rgba(255, 255, 255, 0.25);
 		}
 	}
 }
