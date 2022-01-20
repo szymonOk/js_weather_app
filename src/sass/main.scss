@@ -1,6 +1,7 @@
 @import './reset';
 @import './colors';
 @import './mixins';
+@import './animation.scss';
 
 body {
 	display: flex;
@@ -10,6 +11,7 @@ body {
 	font-size: 1.8rem;
 	height: 100vh;
 	background-image: linear-gradient(180deg, var(--gradient-first) 0%, var(--gradient-second) 30%);
+	background-repeat: no-repeat;
 }
 
 .switch {
@@ -38,6 +40,14 @@ body {
 
 .switch-active {
 	left: calc(100% - 24px);
+}
+
+.arrow {
+	z-index: 1;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	top: 30%;
 }
 
 .container {
@@ -89,7 +99,7 @@ body {
 		grid-template-columns: 1fr 3px 1fr;
 		width: 100%;
 		z-index: 1;
-		margin-bottom: 3em;
+		margin-bottom: 2em;
 
 		&-img {
 			width: 110px;
@@ -98,6 +108,7 @@ body {
 		}
 
 		&-line {
+			display: none;
 			margin: 0 auto;
 			height: 100%;
 			width: 3px;
@@ -251,7 +262,7 @@ body {
 			height: 2px;
 			width: 30px;
 			background-color: var(--second-color);
-			border: 0.2px solid rgba(255, 255, 255, 0.25);
+			border: 0.3px solid rgba(255, 255, 255, 0.25);
 		}
 	}
 }

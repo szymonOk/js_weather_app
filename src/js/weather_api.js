@@ -6,6 +6,8 @@ const statusImg = document.querySelector('.container__status-img')
 const degrees = document.querySelector('.degrees')
 const body = document.querySelector('body')
 const main = document.querySelector('.container__main')
+const line = document.querySelector('.container__status-line')
+const arrow = document.querySelector('.arrow')
 
 const API_LINK = 'https://api.openweathermap.org/data/2.5/forecast?q='
 const API_COUNT = '&cnt=8'
@@ -23,9 +25,11 @@ const handleWeather = () => {
 			const tempApi = weatherData.list[0].main.temp
 			const statusApi = weatherData.list[0].weather[0].id
 
+			arrow.style.display = 'none'
 			input.value = ''
 			cityName.textContent = cityApi
 			degrees.textContent = Math.floor(tempApi) + '°C'
+			line.style.display = 'block'
 
 			getStatus(statusApi)
 			deleteData()
